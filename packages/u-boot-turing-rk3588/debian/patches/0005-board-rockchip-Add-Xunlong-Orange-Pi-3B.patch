@@ -18,7 +18,7 @@ Signed-off-by: Ricardo Pardini <ricardo@pardini.net>
  arch/arm/dts/Makefile                       |   1 +
  arch/arm/dts/rk3566-orangepi-3b-u-boot.dtsi |  24 +
  arch/arm/dts/rk3566-orangepi-3b.dts         | 869 ++++++++++++++++++++
- configs/orangepi-3b-rk3566_defconfig        | 123 +++
+ configs/orangepi-3b-rk3566_defconfig        | 125 +++
  doc/board/rockchip/rockchip.rst             |   1 +
  5 files changed, 1009 insertions(+)
  create mode 100644 arch/arm/dts/rk3566-orangepi-3b-u-boot.dtsi
@@ -947,7 +947,7 @@ new file mode 100644
 index 00000000000..5557d983f31
 --- /dev/null
 +++ b/configs/orangepi-3b-rk3566_defconfig
-@@ -0,0 +1,123 @@
+@@ -0,0 +1,125 @@
 +CONFIG_ARM=y
 +CONFIG_SKIP_LOWLEVEL_INIT=y
 +CONFIG_COUNTER_FREQUENCY=24000000
@@ -1047,6 +1047,8 @@ index 00000000000..5557d983f31
 +CONFIG_DWC_ETH_QOS_ROCKCHIP=y
 +CONFIG_NVME_PCI=y
 +CONFIG_PCIE_DW_ROCKCHIP=y
++CONFIG_BRCM_TRACING=y
++CONFIG_BRCMDBG=y
 +CONFIG_PHY_ROCKCHIP_INNO_USB2=y
 +CONFIG_PHY_ROCKCHIP_NANENG_COMBOPHY=y
 +CONFIG_SPL_PINCTRL=y
