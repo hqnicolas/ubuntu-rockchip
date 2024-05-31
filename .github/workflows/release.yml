@@ -35,9 +35,7 @@ jobs:
         matrix:
           project:
             - desktop
-            - server
           release:
-            - jammy
             - noble
 
     steps:
@@ -89,32 +87,9 @@ jobs:
       matrix:
         board:
           - orangepi-3b
-          - orangepi-5
-          - orangepi-5b
-          - orangepi-5-plus
-          - orangepi-5-pro
-          - rock-5b
-          - rock-5a
-          - rock-5-itx
-          - radxa-cm5-io
-          - radxa-nx5-io
-          - radxa-zero3
-          - nanopc-t6
-          - nanopi-r6c
-          - nanopi-r6s
-          - indiedroid-nova
-          - mixtile-blade3
-          - mixtile-core3588e
-          - lubancat-4
-          - turing-rk1
-          - roc-rk3588s-pc
-          - armsom-sige7
-          - armsom-w3
         project:
           - desktop
-          - server
         release:
-          - jammy
           - noble
 
     steps:
