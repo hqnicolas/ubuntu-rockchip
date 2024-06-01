@@ -885,18 +885,18 @@ index 00000000000..319236efc25
 +};
 +
 +&usb2phy0_otg {
++	status = "okay";
++};
++
++&u2phy1_host {
++	status = "disabled";
++};
++
++&u2phy1_otg {
 +	status = "disabled";
 +};
 +
 +&usb2phy1 {
-+	status = "disabled";
-+};
-+
-+&usb2phy1_host {
-+	status = "disabled";
-+};
-+
-+&usb2phy1_otg {
 +	status = "disabled";
 +};
 +
@@ -911,7 +911,7 @@ index 00000000000..319236efc25
 +&usb_host0_xhci {
 +	dr_mode = "host";
 +	extcon = <&usb2phy0>;
-+	status = "okay";
++	status = "disabled";
 +};
 +
 +&usb_host1_ehci {
