@@ -871,7 +871,7 @@ index 00000000000..319236efc25
 +};
 +
 +/* (debug) uart2 has connectors near the usb-c power, but also on the 40-pin pins 6 (tx) and 8 (rx) - don't wire both */
-+&uart2 {
++&uart8 {
 +	status = "okay";
 +};
 +
@@ -885,7 +885,7 @@ index 00000000000..319236efc25
 +};
 +
 +&usb2phy0_otg {
-+	status = "okay";
++	status = "disabled";
 +};
 +
 +&usb2phy1 {
@@ -1066,10 +1066,10 @@ index 00000000000..5557d983f31
 +CONFIG_SYSRESET=y
 +CONFIG_USB=y
 +CONFIG_USB_XHCI_HCD=y
-+CONFIG_USB_EHCI_HCD=y
-+CONFIG_USB_EHCI_GENERIC=y
-+CONFIG_USB_OHCI_HCD=y
-+CONFIG_USB_OHCI_GENERIC=y
++CONFIG_USB_EHCI_HCD=m
++CONFIG_USB_EHCI_GENERIC=m
++CONFIG_USB_OHCI_HCD=m
++CONFIG_USB_OHCI_GENERIC=m
 +CONFIG_USB_DWC3=y
 +CONFIG_USB_DWC3_GENERIC=y
 +CONFIG_ERRNO_STR=y
