@@ -888,11 +888,11 @@ index 00000000000..319236efc25
 +	status = "okay";
 +};
 +
-+&u2phy1_host {
++&usb2phy1 {
 +	status = "disabled";
 +};
 +
-+&u2phy1_otg {
++&usb2phy1_host {
 +	status = "disabled";
 +};
 +
