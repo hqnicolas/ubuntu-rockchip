@@ -875,22 +875,29 @@ index 00000000000..319236efc25
 +	status = "okay";
 +};
 +
-+&u2phy0_host {
-+	phy-supply = <&vcc5v0_host>;
++&usb2phy0 {
 +	status = "okay";
 +};
 +
-+&u2phy0_otg {
-+	phy-supply = <&vcc5v0_host>;
++&usb2phy0_host {
++	phy-supply = <&vbus>;
 +	status = "okay";
 +};
 +
-+&u2phy1_otg {
++&usb2phy0_otg {
++	status = "okay";
++};
++
++&usb2phy1 {
 +	status = "disabled";
 +};
 +
-+&usb2phy0 {
-+	status = "okay";
++&usb2phy1_host {
++	status = "disabled";
++};
++
++&usb2phy1_otg {
++	status = "disabled";
 +};
 +
 +&usb_host0_ehci {
@@ -901,6 +908,12 @@ index 00000000000..319236efc25
 +	status = "disabled";
 +};
 +
++&usb_host0_xhci {
++	dr_mode = "host";
++	extcon = <&usb2phy0>;
++	status = "okay";
++};
++
 +&usb_host1_ehci {
 +	status = "disabled";
 +};
@@ -909,23 +922,10 @@ index 00000000000..319236efc25
 +	status = "disabled";
 +};
 +
-+&usbdrd_dwc3 {
-+	dr_mode = "host";
-+	extcon = <&usb2phy0>;
-+	status = "okay";
++&usb_host1_xhci {
++	status = "disabled";
 +};
 +
-+&usbdrd30 {
-+	status = "okay";
-+};
-+
-+&usbhost_dwc3 {
-+	status = "okay";
-+};
-+
-+&usbhost30 {
-+	status = "okay";
-+};
 +&vop {
 +	assigned-clocks = <&cru DCLK_VOP0>, <&cru DCLK_VOP1>;
 +	assigned-clock-parents = <&pmucru PLL_HPLL>, <&cru PLL_VPLL>;
@@ -1066,10 +1066,10 @@ index 00000000000..5557d983f31
 +CONFIG_SYSRESET=y
 +CONFIG_USB=y
 +CONFIG_USB_XHCI_HCD=y
-+CONFIG_USB_EHCI_HCD=m
-+CONFIG_USB_EHCI_GENERIC=m
-+CONFIG_USB_OHCI_HCD=m
-+CONFIG_USB_OHCI_GENERIC=m
++CONFIG_USB_EHCI_HCD=y
++CONFIG_USB_EHCI_GENERIC=y
++CONFIG_USB_OHCI_HCD=y
++CONFIG_USB_OHCI_GENERIC=y
 +CONFIG_USB_DWC3=y
 +CONFIG_USB_DWC3_GENERIC=y
 +CONFIG_ERRNO_STR=y
