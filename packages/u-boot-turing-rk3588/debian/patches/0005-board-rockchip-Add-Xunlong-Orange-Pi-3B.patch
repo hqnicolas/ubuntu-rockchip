@@ -786,7 +786,7 @@ index 00000000000..319236efc25
 +  * 3/ VCCIO2 voltage control selection (0xFDC20140)
 +  *	BIT[0]: 0x0: from GPIO_0A7 (default)
 +  *	BIT[0]: 0x1: from GRF
-+  *    Default is determined by Pin FLASH_VOL_SEL/GPIO0_A7:
++  *  Default is determined by Pin FLASH_VOL_SEL/GPIO0_A7:
 +  *	L:VCCIO2 must supply 3.3V
 +  *	H:VCCIO2 must supply 1.8V
 +  */
@@ -875,6 +875,7 @@ index 00000000000..319236efc25
 +};
 +
 +/* (debug) uart2 has connectors near the usb-c power, but also on the 40-pin pins 6 (tx) and 8 (rx) - don't wire both */
++
 +&uart8 {
 +	status = "okay";
 +};
@@ -940,7 +941,6 @@ index 00000000000..319236efc25
 +	status = "okay";
 +};
 +
-
 diff --git a/configs/orangepi-3b-rk3566_defconfig b/configs/orangepi-3b-rk3566_defconfig
 new file mode 100644
 index 00000000000..5557d983f31
