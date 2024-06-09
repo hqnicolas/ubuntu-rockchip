@@ -36,7 +36,7 @@ jobs:
           project:
             - desktop
           release:
-            - noble
+            - jammy
 
     steps:
       - name: Get more disk space
