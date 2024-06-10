@@ -15,6 +15,7 @@ jobs:
             - desktop
           suite:
             - jammy
+            - noble
     steps:
       - name: Get more disk space
         uses: jlumbroso/free-disk-space@main
@@ -61,6 +62,7 @@ jobs:
     strategy:
         matrix:
           suite:
+            - jammy
             - noble
     steps:
       - name: Get more disk space
@@ -114,6 +116,7 @@ jobs:
         flavor:
           - desktop
         suite:
+          - jammy
           - noble
     steps:
       - name: Get more disk space
