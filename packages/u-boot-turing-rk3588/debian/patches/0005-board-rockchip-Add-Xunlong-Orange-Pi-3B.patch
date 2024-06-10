@@ -343,28 +343,28 @@ index 00000000000..319236efc25
 +	status = "okay";
 +};
 +
-+&route_hdmi {
-+	status = "okay";
-+	connect = <&vp0_out_hdmi>;
-+};
 +
-+&lpddr4_params {
-+	/* freq info, freq_0 is final frequency, unit: MHz */
-+	freq_0 = <1056>;
-+};
 +
-+&lpddr4x_params {
-+	/* freq info, freq_0 is final frequency, unit: MHz */
-+	freq_0 = <1056>;
-+};
 +
-+&hdmi_in_vp0 {
-+	status = "okay";
-+};
 +
-+&hdmi_in_vp1 {
-+	status = "disabled";
-+};
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
 +
 +
 +&hdmi_sound {
